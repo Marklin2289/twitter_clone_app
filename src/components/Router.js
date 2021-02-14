@@ -10,7 +10,7 @@ import Home from "../routes/Home";
 import Navigation from "components/Navigation";
 import Profile from "routes/Profile";
 
-export default function AppRouter({ isLoggedIn }) {
+export default function AppRouter({ isLoggedIn, userObj }) {
   return (
     <Router>
       {isLoggedIn && <Navigation />}
@@ -18,7 +18,7 @@ export default function AppRouter({ isLoggedIn }) {
         {isLoggedIn ? (
           <>
             <Route exact path="/">
-              <Home />
+              <Home userObj={userObj} />
             </Route>
             <Route exact path="/profile">
               <Profile />
