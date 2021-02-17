@@ -2,6 +2,7 @@ import React from "react";
 import ReactDOM from "react-dom";
 import { authService } from "./fbase";
 import App from "./components/App";
+import "./styles.css";
 
 // console.log(firebase);
 ReactDOM.render(
